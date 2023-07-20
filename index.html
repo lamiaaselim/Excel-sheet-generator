@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/all.min.css">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- my style CSS -->
+    <link href="styles/style.css" rel="stylesheet" />
+    <title>Excel Sheet Generator</title>
+</head>
+
+<body>
+<!------------- Start header  ---------------->
+<header class="container py-5">
+    <h1 class="fs-1 text-center"> Excel Sheet Generator </h1>
+</header>
+<!------------- End header  ------------------>
+
+<!------------- Start page Setup ----------------->
+<section class="container">
+<div class="row py-3 mb-2" id="content">
+    <div class="mb-3 row">
+        <label for="numRows" class="fs-5 col-sm-2 col-form-label">Number of Rows</label>
+        <div class="col-sm-10">
+            <input type="number" class="form-control" id="rows">
+        </div>
+    </div>
+    <div class="mb-3 row">
+        <label for="numColumn" class="fs-5 col-sm-2 col-form-label">Number of Column</label>
+        <div class="col-sm-10">
+            <input type="number" class="form-control" id="columns">
+        </div>
+    </div>
+    <div class="row mx-auto text-center">
+        <div class="d-grid gap-2 d-md-block">
+            <button class="btn btn-outline-success my-3" onclick="generateTable()">Generate</button>
+            <button class="btn btn-outline-dark my-3" onclick="ExportToExcel('xlsx')">Export</button>
+        </div>
+    </div>
+</div>
+</section>
+<!------------- End page Setup ----------------->
+
+<!------------- Start page Table ----------------->
+<section class="table">
+<table id="table" cellspacing="6px">
+    <tbody class="sheet-body"></tbody>
+</table>
+</section>
+<!------------- Start page Table ----------------->
+
+<!-- jQuery and Bootstrap Bundle (includes Popper)-->
+<script src="scripts/bootstrap.bundle.min.js"></script>
+<script src="scripts/all.min.js"></script>
+<script src="scripts/jqueryLib.min.js"></script>
+<script src="scripts/jquery.nicescroll.js"></script>
+<script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
+<script src="scripts/script.js"></script>
+</body>
+</html>
